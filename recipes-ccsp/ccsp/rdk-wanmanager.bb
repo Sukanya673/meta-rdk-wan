@@ -8,9 +8,10 @@ DEPENDS_append = " ${@bb.utils.contains('DISTRO_FEATURES', 'rdkb_wan_manager', '
 
 require recipes-ccsp/ccsp/ccsp_common.inc
 
-GIT_TAG = "v2.8.0"
-SRC_URI := "git://github.com/rdkcentral/RdkWanManager.git;branch=main;protocol=https;name=WanManager;tag=${GIT_TAG}"
-PV = "${GIT_TAG}+git${SRCPV}"
+#GIT_TAG = "v2.8.0"
+SRC_URI := "git://github.com/Sukanya673/RdkWanManager.git;branch=CTB-3889_3075;protocol=https;name=WanManager;"
+SRCREV = "${AUTOREV}"
+PV = "${RDK_RELEASE}+git${SRCPV}"
 
 S = "${WORKDIR}/git"
 
